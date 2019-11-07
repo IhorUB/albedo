@@ -1,0 +1,175 @@
+.portfolio-wrap {
+  display: flex;
+  align-items: center;
+  height: 291px;
+}
+
+.portfolio-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .title {
+    .heading-small {
+      color: $nav-hover;
+      margin-bottom: 20px;
+    }
+    .heading-large {
+      color: $MontsBold;
+    }
+  }
+}
+
+.grid-gallery {
+  display: grid;
+  width: 100%;
+  min-height: 600px;
+  max-width: 1920px;
+  grid-template-columns: repeat(4, [col] 1fr);
+  grid-template-rows: 480px 308px;
+  .item {
+    position: relative;
+    .item-content {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(33, 43, 49, 0.9);
+      padding: 1rem;
+      text-align: center;
+      span {
+        color: $nav-hover;
+        font-family: $Cambay;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      a {
+        color: $white;
+        font-family: $Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        margin: 19px 0 16px 0;
+      }
+      .icon-wrap {
+        display: flex;
+        a:nth-child(2) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .item:hover .item-content {
+    display: flex;
+    cursor: pointer;
+  }
+  .grid-first {
+    grid-column: col 1 / 3;
+    background: url("../img/portfolio/laptop.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .grid-second {
+    grid-column: col 3 / 4;
+    grid-row: 1 / 3;
+    background: url("../img/portfolio/bage.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .grid-third {
+    grid-column: col 4 / 5;
+    background: url("../img/portfolio/note.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .grid-fourth {
+    grid-column: col 1 / 2;
+    grid-row: 2 / 3;
+    background: url("../img/portfolio/pensil.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .grid-fifth {
+    grid-column: col 2 / 3;
+    grid-row: 2 / 3;
+    background: url("../img/portfolio/posts.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .grid-sixth {
+    grid-column: col 4 / 5;
+    grid-row: 2 / 3;
+    background: url("../img/portfolio/phone.jpg") center no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .btn-view {
+    margin-top: 1rem;
+  }
+  .portfolio-info {
+    justify-content: center;
+  }
+  .grid-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, [row] 500px);
+    .item {
+      grid-column: 1;
+    }
+    .grid-first {
+      grid-row: 1 / 2;
+    }
+    .grid-second {
+      grid-row: 2 / 3;
+    }
+    .grid-third {
+      grid-row: 3 / 4;
+    }
+    .grid-fourth {
+      grid-row: 4 / 5;
+    }
+    .grid-fifth {
+      grid-row: 5 / 6;
+    }
+    .grid-sixth {
+      grid-row: 6 / 7;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .portfolio-info {
+    justify-content: center;
+    .btn-view {
+      margin-top: 1rem;
+    }
+  }
+  .grid-gallery {
+    grid-template-columns: repeat(2, [col] 1fr);
+    grid-template-rows: repeat(4, [row] 360px);
+    .grid-first {
+      grid-column: col 1 / 3;
+      grid-row: 1 / 2;
+    }
+    .grid-second {
+      grid-column: col 1 / 2;
+      grid-row: 3 / 5;
+    }
+    .grid-third {
+      grid-column: col 2 / 2;
+      grid-row: 3 / 4;
+    }
+    .grid-fourth {
+      grid-column: col 1 / 2;
+      grid-row: 2 / 3;
+    }
+    .grid-fifth {
+      grid-column: col 2 / 3;
+      grid-row: 2 / 3;
+    }
+    .grid-sixth {
+      grid-column: col 2 / 2;
+      grid-row: 4 / 5;
+    }
+  }
+}

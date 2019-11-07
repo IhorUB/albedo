@@ -1,0 +1,147 @@
+.contacts {
+  position: relative;
+  background: url("../img/contacts-bg.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1080px;
+  .heading-small {
+    margin-bottom: 39px;
+  }
+}
+
+.contacts-wrap {
+  display: flex;
+  justify-content: space-between;
+  color: $dark-text;
+  font-family: $Cambay;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.contacts-info {
+  .heading-large {
+    margin-bottom: 59px;
+  }
+  .email {
+    color: $header-main;
+  }
+  span, address {
+    color: $white;
+  }
+  .social-item {
+    display: flex;
+    justify-content: flex-start;
+    li {
+      margin-left: 20px;
+      a {
+        color: #464646;
+      }
+      a:hover {
+        color: #8799a3;
+      }
+    }
+  }
+  li:nth-child(1) {
+    margin-left: 0;
+  }
+}
+
+.contact-form {
+  flex-basis: 560px;
+  .heading-large {
+    margin-bottom: 59px;
+  }
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0 44px 0;
+    .form-control {
+      width: 260px;
+      height: 50px;
+      padding-left: 39px;
+      border-radius: 25px;
+      border: 2px solid #8799a3;
+      background-color: #212121;
+      color: $white;
+      font-family: $Cambay;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 26px;
+      outline: none;
+    }
+  }
+  textarea {
+    height: 120px;
+    width: 100%;
+    padding: 21px 0 0 39px;
+    border-radius: 25px;
+    border: 2px solid #353535;
+    background-color: #2b2b2b;
+    outline: none;
+    color: $dark-text;
+    font-family: $Cambay;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    resize: none;
+  }
+  .btn-send {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  .pt-80 {
+    padding-top: 0;
+  }
+  .foo {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width: $screen-xl-min) {
+  .contacts {
+    height: auto;
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .contacts-wrap {
+    flex-wrap: wrap;
+  }
+  .contacts {
+    .heading-small {
+      text-align: center;
+    }
+  }
+  .contacts-wrap {
+    justify-content: center;
+    .contact-form {
+      margin-top: 40px;
+      .heading-large {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .contacts-wrap {
+    flex-wrap: wrap;
+  }
+  .contact-form {
+    margin-top: 40px;
+    .input-group {
+      .form-control {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.clients {
+  background: url("../img/slider-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-wrap {
+  text-align: center;
+  .heading-small {
+    margin-bottom: 39px;
+  }
+  .heading-large {
+    margin-bottom: 68px;
+  }
+  .partners-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+//swiper slider
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding-top: 21px !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: $white !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  .comment {
+    position: relative;
+    color: $white;
+    font-family: $Coustard;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 47px;
+    max-width: 744px;
+    .mark-quote {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .client {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .client-data {
+      margin-left: 21px;
+      p {
+        color: #ffff00;
+        font-family: $Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+        span {
+          opacity: 0.3;
+          color: $white;
+          font-family: $Cambay;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+
+.partners-logo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 90px;
+  a {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: $screen-xl-min) {
+  .clients {
+    height: auto;
+    max-height: inherit;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .swiper-slide {
+    .comment {
+      max-width: 259px;
+    }
+  }
+}

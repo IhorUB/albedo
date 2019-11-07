@@ -1,0 +1,154 @@
+.about {
+  background: $bg-blue;
+}
+
+.txt-wrap {
+  padding: 134px 0 80px 0;
+}
+
+.txt-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .heading-large {
+    flex-basis: 532px;
+  }
+  p {
+    flex-basis: 552px;
+    color: $white;
+    font-family: $Cambay;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: justify;
+  }
+}
+
+.services {
+  background: url("../img/bg-service.png");
+  display: flex;
+  align-items: center;
+  height: 315px;
+}
+
+.services-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .item-service {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 357px;
+    .icon {
+      width: 60px;
+      height: 60px;
+    }
+    .service-content {
+      margin-left: 38px;
+      max-width: 257px;
+      .heading-little {
+        margin-bottom: 24px;
+      }
+    }
+    p {
+      color: $white;
+      font-family: $Cambay;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+}
+
+.social {
+  height: 234px;
+  display: flex;
+  align-items: center;
+}
+
+.social-wrap {
+  display: flex;
+  p {
+    color: $white;
+    font-family: $Cambay;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .social-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 122px;
+    li {
+      width: 31px;
+      height: 20px;
+      margin-left: 30px;
+      a {
+        color: $social-icon-dark;
+      }
+      a:hover {
+        color: $white;
+      }
+    }
+    li:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+}
+
+@media(max-width: $screen-md-max) {
+  .txt-content {
+    .heading-large, p {
+      flex: 1;
+    }
+  }
+  .services {
+    height: auto;
+    padding: 80px 0;
+  }
+  .social-wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .social-item {
+      margin-left: 0;
+      margin-top: 15px;
+      li {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media(max-width: $screen-sm-max) {
+  .txt-wrap {
+    padding: 80px 0 80px 0;
+    .heading-large {
+      margin: 10px 0;
+      font-size: 38px;
+    }
+  }
+  .txt-content {
+    .heading-large, p {
+      flex: inherit;
+    }
+    .heading-large {
+      margin: 15px 0;
+    }
+  }
+  
+  .services-wrap {
+    justify-content: center;
+    .item-service {
+      .service-content {
+        .heading-little {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}

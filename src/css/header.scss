@@ -1,0 +1,146 @@
+.header{
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  .logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 167px;
+    .logo-link{
+      margin-left: 10px;
+      color: $white;
+      font-family: $Montserrat;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -2.88px;
+    }
+  }
+  .main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 574px;
+    .nav-link{
+      color: $white;
+      font-family: $WorkSans;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 36px;
+    }
+    .nav-link:hover{
+      color: $nav-hover;
+    }
+  }
+  // burger-menu
+  .menu-btn {
+    width: 60px;
+    height: 85px;
+    color: $white;
+    position: relative;
+    z-index: 15;
+    display: none;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 1px;
+    background-color: $white;
+  }
+  .menu-btn span {
+    width: 15px;
+  }
+  .menu-btn span:before {
+    width: 35px;
+  }
+  .menu-btn span:after {
+    width: 25px;
+  }
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+  }
+  .menu-btn span:before {
+    transform: translateY(-9px);
+  }
+  .menu-btn span:after {
+    transform: translateY(9px);
+  }
+  .menu-btn_active span {
+    height: 0;
+  }
+  .menu-btn_active span:before {
+    transform: rotate(45deg);
+    width: 35px;
+    background-color: $white;
+  }
+  .menu-btn_active span:after {
+    transform: rotate(-45deg);
+    width: 35px;
+    background-color: $white;
+  }
+}
+
+.scroll-header{
+  top: 0!important;
+  background-color: #1e1e1e;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.active_nav_link{
+  color: $nav-hover!important;
+}
+.active_nav_menu{
+  display: flex!important;
+  transition: .5s;
+}
+.active_btn_buy{
+  display: initial!important;
+}
+@media (max-width: $screen-xl-min){
+  .header{
+    top: 30px;
+  }
+}
+@media (max-width: $screen-md-max) {
+  .header{
+    top: 0;
+    background-color: #1e1e1e;
+    opacity: 0.7;
+  }
+  .nav{
+    display: block;
+    text-align: center;
+    padding: 5px 0 15px 0;
+    .menu-btn{
+      display: block;
+      position: absolute;
+      right: 10%;
+      top: 0;
+    }
+    .main-nav{
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: inherit;
+      display: none;
+      transition: .5s;
+    }
+    .btn-buy{
+      display: none;
+      
+    }
+  }
+}
