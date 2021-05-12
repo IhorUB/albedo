@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "swiper": "^5.2.0"
+    "swiper": "^6.5.1"
   }
 }
